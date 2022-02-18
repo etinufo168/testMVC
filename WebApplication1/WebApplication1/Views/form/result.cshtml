@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<link href="~/Content/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/form/all.min.css" rel="stylesheet" />
+<link href="~/Content/form/main.css" rel="stylesheet" />
+
+<script src="~/Scripts/form/jquery-1.10.2.js"></script>
+<script src="~/Scripts/form/bootstrap.js"></script>
+<script src="~/Scripts/form/create.js"></script>
+<script src="~/Scripts/form/jquery-ui.min.js"></script>
+<script src="~/Scripts/form/datepicker-zh-TW.js"></script>
+<script src="~/Scripts/form/TextResource.js"></script>
+
+<script type="text/javascript">
+    var model = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model));
+
+    var resultUrl = '@Url.Content("~/form/result")';
+    var saveUrl = '@Url.Content("~/form/save")';
+
+    $(function () {
+        $("#acc").html(model.acc);
+        $("#cel").html(model.cel);
+        $("#email").html(model.email);
+        $("#pas").html(model.pas);
+    });
+</script>
+
+<!--Part2-->
+<div id="part2" class="container body-content">
+    <div class="main_right">
+        <div class="main_right_body">
+            <div class="form_body">
+                <div class="_blank"></div>
+                <div class="body_finish">
+                    <div class="big_tilte_finish">註冊成功</div>
+                    您的資訊為以下
+                    <hr />
+                    帳號: <label id="acc"></label>
+                    <br />
+                    手機號碼: <label id="cel"></label>
+                    <br />
+                    E-Mail: <label id="email"></label>
+                    <br />
+                    密碼: <label id="pas"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

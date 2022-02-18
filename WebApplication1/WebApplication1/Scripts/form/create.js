@@ -477,8 +477,9 @@ $(document).on('click', '#submit', function () {
 	}
 	else{ //沒空值 >合格 > 送出表單
 		console.log("O");
-		$("#part1").css("display","none");
-		$("#part2").css("display","block");
+		//$("#part1").css("display","none");
+        //$("#part2").css("display", "block");
+        send_result();
 		//return false; //temp refuse
 	}
 });
@@ -526,10 +527,35 @@ $(document).on('click', '#skip', function () {
 	else{ //沒空值 >合格 > 送出表單
 		console.log("O");
 		$("#part1").css("display","none");
-		$("#part2").css("display","block");
+        $("#part2").css("display", "block");
 		//return false; //temp refuse
 	}
 });
+
+//將物件送往後端處理
+function send_result() {
+    var data = {
+        acc: $("#acc").val(),
+        cel: $("#cel").val(),
+        email: $("#email").val(),
+        pas: $("#pas").val()
+    }
+
+    //save
+    $.ajax({
+        type: 'POST',
+        cache: false,
+        dataType: 'json',
+        contentType: "application/json",
+        url: saveUrl,
+        data: JSON.stringify({ model: data}),
+        success: function (res) {
+            if (res == true) {
+                window.location.href = resultUrl + "?acc=" + data.acc + "&cel=" + data.cel + "&email=" + data.email + "&pas=" + data.pas;
+            }
+        }
+    });
+}
 /*====================控制css====================*/
 var i = "";
 var finished = true;

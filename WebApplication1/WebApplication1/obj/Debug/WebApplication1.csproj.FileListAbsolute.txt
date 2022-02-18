@@ -76,8 +76,8 @@ E:\download\GIT\GitHub\WebApplication1\WebApplication1\bin\zh-Hant\System.Web.Ra
 E:\download\GIT\GitHub\WebApplication1\WebApplication1\bin\zh-Hant\System.Web.WebPages.resources.dll
 E:\download\GIT\GitHub\WebApplication1\WebApplication1\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
 E:\download\GIT\GitHub\WebApplication1\WebApplication1\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
-E:\download\GIT\GitHub\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache
 E:\download\GIT\GitHub\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
 E:\download\GIT\GitHub\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
 E:\download\GIT\GitHub\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 E:\download\GIT\GitHub\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+E:\download\GIT\GitHub\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojAssemblyReference.cache

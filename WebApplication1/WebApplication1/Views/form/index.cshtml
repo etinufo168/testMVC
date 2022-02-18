@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<link href="~/Content/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/form/all.min.css" rel="stylesheet" />
+<link href="~/Content/form/main.css" rel="stylesheet" />
+
+<script src="~/Scripts/form/jquery-1.10.2.js"></script>
+<script src="~/Scripts/form/bootstrap.js"></script>
+<script src="~/Scripts/form/create.js"></script>
+<script src="~/Scripts/form/jquery-ui.min.js"></script>
+<script src="~/Scripts/form/datepicker-zh-TW.js"></script>
+<script src="~/Scripts/form/TextResource.js"></script>
+
+<script type="text/javascript">
+    var resultUrl = '@Url.Content("~/form/result")';
+    var saveUrl = '@Url.Content("~/form/save")';
+</script>
+<!--Part1-->
+<div id="part1" class="container body-content">
+    <div class="main_right">
+        <div class="main_right_body">
+            <div class="form_body">
+                <div class="_blank"></div>
+                <div class="form_body_top">
+                    <div class="form-horizontal">
+
+                        <div class="big_tilte">註冊</div>
+
+                        <div id="acc_group" class="form-group">
+                            <div id="acc_block" class="block">
+                                <div id="acc_title" class="title">帳號</div>
+                                <div id="acc_sub" class="sub">
+                                    <input type="text" id="acc" name="acc" class="form-control" maxlength="20" placeholder="請輸入帳號" />
+                                    <span id="acc_error" class="far fa-times-circle error_icon" disable></span>
+                                </div>
+                                <div id="acc_labelO" class="msg_label_green">帳號可使用</div>
+                                <div id="acc_label" class="msg_label_red">已註冊帳號</div>
+                                <div id="acc_labelN" class="msg_label_red_null">請輸入帳號</div>
+                            </div>
+                        </div>
+
+                        <div id="cel_group" class="form-group">
+                            <div id="cel_block" class="block">
+                                <div id="cel_title" class="title">手機號碼</div>
+                                <div id="cel_sub" class="sub">
+                                    <input type="text" id="cel" name="cel" class="form-control" maxlength="10" placeholder="請輸入手機號碼" />
+                                    <span id="cel_error" class="far fa-times-circle error_icon" disable></span>
+                                </div>
+                                <div id="cel_label" class="msg_label_red">無效號碼</div>
+                                <div id="cel_labelN" class="msg_label_red_null">請輸入手機號碼</div>
+                            </div>
+                        </div>
+
+                        <div id="email_group" class="form-group">
+                            <div id="email_block" class="block">
+                                <div id="email_title" class="title">E-Mail</div>
+                                <div id="email_sub" class="sub">
+                                    <input type="text" id="email" name="email" class="form-control" maxlength="40" placeholder="請輸入信箱" />
+                                    <span id="email_error" class="far fa-times-circle error_icon" disable></span>
+                                </div>
+                                <div id="email_label" class="msg_label_red">無效信箱</div>
+                                <div id="email_labelN" class="msg_label_red_null">請輸入信箱</div>
+                            </div>
+                        </div>
+
+                        <div id="pas_group" class="form-group">
+                            <div id="pas_block" class="block">
+                                <div id="pas_title" class="title">密碼</div>
+                                <div id="pas_sub" class="sub">
+                                    <input type="password" id="pas" name="pas" class="form-control" maxlength="20" placeholder="請輸入密碼" />
+                                    <span id="pas_error" class="far fa-times-circle error_icon" disable></span>
+                                </div>
+                                <div id="pas_labelN" class="msg_label_red_null">請輸入密碼</div>
+                            </div>
+                            <div id="pas_eye" class="fas field-icon fa-eye"></div>
+                        </div>
+
+                        <div id="rpas_group" class="form-group">
+                            <div id="rpas_block" class="block">
+                                <div id="rpas_title" class="title">確認密碼</div>
+                                <div id="rpas_sub" class="sub">
+                                    <input type="password" id="rpas" name="rpas" class="form-control" maxlength="20" placeholder="請確認密碼" />
+                                    <span id="rpas_error" class="far fa-times-circle error_icon" disable></span>
+                                </div>
+                                <div id="rpas_label" class="msg_label_red">密碼不一致</div>
+                                <div id="rpas_labelN" class="msg_label_red_null">請確認密碼</div>
+                            </div>
+                            <div id="rpas_eye" class="fas field-icon fa-eye"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--固定-->
+                <div class="form-group submit_group">
+                    <input id="submit" type="button" value="註冊" class="submit" />
+                </div>
+                <!--固定-->
+            </div>
+        </div>
+    </div>
+</div>
